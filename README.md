@@ -1,8 +1,8 @@
 # x77/HoneyTrack
 # Proyecto HoneyTrack, Key:x77
-Creado por Mario Alberto Parra Alonso
-Proyecto CFGS Administracion de Sistemas Informáticos en red
-TW: @MPAlonso_
+	Creado por Mario Alberto Parra Alonso
+	Proyecto CFGS Administracion de Sistemas Informáticos en red
+	TW: @MPAlonso_
 
 # 0. Servicios
 	Kippo
@@ -17,7 +17,7 @@ TW: @MPAlonso_
 	apt-get install openssh-server openssh-client python-dev openssl python-openssl python-pasn1 python-twisted subversion mysql-server mysql-client
 
 # 3. Configure
-	
+
 	useradd -d /home/master -s /bin/bash -m master -g sudo
 	passwd master
 	cd /home/master/
