@@ -4,12 +4,10 @@
 # Proyecto CFGS Administracion de Sistemas Informáticos en red
 #
 # Servicios
-#	Honeypots
-# 	PHP
-#	MySQL
-#
-#
-#
+	Honeypots
+ 	PHP
+	MySQL
+
 # Intro
 # Install
 # Configure
