@@ -4,13 +4,13 @@ Creado por Mario Alberto Parra Alonso
 Proyecto CFGS Administracion de Sistemas Informáticos en red
 TW: @MPAlonso_
 
-# Servicios
+# 0. Servicios
 	Honeypots
  	PHP
 	MySQL
 
-# Intro
+# 0. Intro
 
-# Install
-# Configure
-# Run
+# 0. Install
+# 0. Configure
+# 0. Run
