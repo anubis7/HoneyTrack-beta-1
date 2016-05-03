@@ -12,13 +12,13 @@
 
 # 1. Intro
 
-# 2. Install
+# 2. Install Kippo
 	apt-get update && apt-get upgrade -y
 	apt-get install openssh-server openssh-client 
 	python-dev openssl python-openssl python-pasn1 
 	python-twisted subversion mysql-server mysql-client
 
-# 3. Configure
+# 3. Configure Kippo
 
 	useradd -d /home/master -s /bin/bash -m master -g sudo
 	passwd master
@@ -48,5 +48,5 @@
 	sudo iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-port 2222
 	sudo iptables-save
 
-# 4. Run
+# 4. Run Kippo
 	./start.sh
