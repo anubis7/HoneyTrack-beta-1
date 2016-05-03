@@ -47,4 +47,4 @@
 	sudo iptables-save
 
 # 4. Run
-./start.sh
+	./start.sh
