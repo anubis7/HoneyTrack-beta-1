@@ -35,19 +35,16 @@
 		echo "admin:501:qwerty"
 		echo "admin:501:123456789"
 	EOF
-
-cd /home/master/kippo
-
-utils/passdb.py data/pass.db add password
-utils/passdb.py data/pass.db add admin
-utils/passdb.py data/pass.db add root
-utils/passdb.py data/pass.db add t00r
-
-df -h > txtcmds/bin/df
-sudo iptables -L txtcmds/bin/iptables
-ps aux > txtcmds/bin/ps
-sudo iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-port 2222
-sudo iptables-save
+	cd /home/master/kippo
+	utils/passdb.py data/pass.db add password
+	utils/passdb.py data/pass.db add admin
+	utils/passdb.py data/pass.db add root
+	utils/passdb.py data/pass.db add t00r
+	df -h > txtcmds/bin/df
+	sudo iptables -L txtcmds/bin/iptables
+	ps aux > txtcmds/bin/ps
+	sudo iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-port 2222
+	sudo iptables-save
 
 # 4. Run
 ./start.sh
