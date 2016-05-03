@@ -9,8 +9,8 @@ TW: @MPAlonso_
  	PHP
 	MySQL
 
-# 0. Intro
+# 1. Intro
 
-# 0. Install
-# 0. Configure
-# 0. Run
+# 2. Install
+# 3. Configure
+# 4. Run
