@@ -25,7 +25,7 @@
 	update-grub2
 	netstat -atnp
 	shutdown -r now
-	
+
 # 2. Install Kippo
 	apt-get update && apt-get upgrade -y
 	apt-get install openssh-server openssh-client 
@@ -39,6 +39,25 @@
 	cd /home/master/
 	svn checkout http://kippo.googlecode.com/svn/trunk ./kippo
 	mv kippo.cfg.dist kippo.cfg
+	nano kippo.cfg
+		- ssh_add = IP (Local Machine)
+		- ssh_port = 2222
+		- hostname = display_name
+		- download_limit_size = if you want limit download
+		- contents_path = honeyfs
+		- filesystem_file = fs.pickle
+		- data_path = data
+		- txtcmds_path = txtcmds
+		- fake_addr = 192.168.20.253
+		- ssh_version_string = SSH-2.0-OpenSSH_5.1p1 Debian-5
+		- banner_file = banner
+		- [database_mysql] Log in database
+			- host = hostofmysql
+			- database = databaseforkippo
+			- username = usermysql
+			- password = passmysql
+			- port = portmysql default: 3306
+
 	sudo utils/createfs.py > fs.pickle
 	cat /etc/issue
 	sudo echo "Ubuntu 10.10 LTS \n \l" > honeyfs/etc/issue
