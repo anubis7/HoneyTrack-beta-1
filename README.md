@@ -5,13 +5,27 @@
 	TW: @MPAlonso_
 
 # 0. Servicios
-	Kippo
-	Dionaea
- 	PHP
-	MySQL
+	- Kippo
+	- Dionaea
+ 	- PHP
+	- MySQL
 
 # 1. Intro
 
+
+# 3. Prepare Enviroment
+	`Disable` IPv6
+	nano /etc/sysctl.conf
+		- net.ipv6.conf.all.disable_ipv6 = 1
+		- net.ipv6.conf.default.disable_ipv6 = 1
+		- net.ipv6.conf.lo.disable_ipv6 = 1
+	sysctl -p
+	nano /etc/default/grup 			//Or GRUB2
+		GRUB_CMDLINE_LINUX="ipv6.disable=1"
+	update-grub2
+	netstat -atnp
+	shutdown -r now
+	
 # 2. Install Kippo
 	apt-get update && apt-get upgrade -y
 	apt-get install openssh-server openssh-client 
