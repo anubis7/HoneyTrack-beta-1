@@ -3,6 +3,7 @@
 	Creado por Mario Alberto Parra Alonso
 	Proyecto CFGS Administracion de Sistemas Informáticos en red
 	TW: @MPAlonso_
+	Proyecto realizado en: Ubuntu Server 14.04 LTS
 
 # 0. Servicios
 	- Kippo
@@ -83,3 +84,18 @@
 
 # 4. Run Kippo
 	./start.sh
+
+# Dionaea
+
+	#1. Install
+		sudo apt-get update
+		sudo apt-get dist-upgrade
+		sudo apt-get install software-properties-common
+		sudo add-apt-repository ppa:honeynet/nightly
+		sudo apt-get update
+		sudo apt-get install dionaea
+
+	#2. Config
+		
+	#4. Run
+		sudo service dionaea start
