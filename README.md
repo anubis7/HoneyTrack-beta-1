@@ -15,7 +15,9 @@
 
 
 # 3. Prepare Enviroment
-	`Disable` IPv6
+	sudo apt-get update
+	sudo apt-get upgrade -y
+	==Disable IPV6==
 	nano /etc/sysctl.conf
 		- net.ipv6.conf.all.disable_ipv6 = 1
 		- net.ipv6.conf.default.disable_ipv6 = 1
@@ -85,6 +87,74 @@
 # 4. Run Kippo
 	./start.sh
 
+# Glastopf
+	#1 Install 
+		sudo apt-get update
+		sudo apt-get install python2.7 python-openssl python-gevent libevent-dev python2.7-dev build-essential make liblapack-dev libmysqlclient-dev python-chardet python-requests python-sqlalchemy python-lxml python-beautifulsoup mongodb python-pip python-dev python-numpy python-setuptools python-numpy-dev python-scipy libatlas-dev g++ git php5 php5-dev gfortran
+
+		sudo apt-get install libxml2-dev libxslt1-dev python-dev python-lxml libffi-dev
+		sudo pip install --upgrade distribute
+		sudo pip install --upgrade gevent webob pyopenssl chardet lxml sqlalchemy jinja2 beautifulsoup requests cssselect pymongo MySQL-python pylibinjection libtaxii greenlet psutil
+
+	#2 Install PHP SandBox
+		cd /opt
+		sudo git clone git://github.com/glastopf/BFR.git
+		cd BFR
+		sudo phpize
+		sudo ./configure --enable-bfr
+		sudo make && sudo make install
+
+		Open the php.ini file and add bfr.so accordingly to the build output:
+
+		zend_extension = /usr/lib/php5/20090626+lfs/bfr.so
+
+		cd /opt
+		sudo git clone https://github.com/glastopf/glastopf.git
+		cd glastopf
+		sudo python setup.py install
+
+	#3 Configure
+		cd /opt
+		sudo mkdir glastopf
+		cd glastopf
+		sudo glastopf-runner
+		[webserver]
+		host = 0.0.0.0
+		port = 80
+		uid = nobody
+		gid = nogroup
+		proxy_enabled = False
+		[main-database]
+		#If disabled a sqlite database will be created (db/glastopf.db)
+		#to be used as dork storage.
+		enabled = True
+		#mongodb or sqlalchemy connection string, ex:
+		#mongodb://localhost:27017/glastopf
+		#mongodb://james:bond@localhost:27017/glastopf
+		#mysql://james:bond@somehost.com/glastopf
+		#connection_string = sqlite:///db/glastopf.db
+		connection_string = mysql://glaspot:glaspot@localhost/glaspot
+		
+	#4 LogMySQL
+
+		sudo apt-get install mysql-server python-mysqldb
+
+#REVISAR PARA VER SI PODEMOS USAR LA MISMA EN LA QUE ESTA KIPPO
+
+		mysql -u root -p
+		mysql> create database glaspot;
+		Query OK, 1 row affected (0.00 sec)
+		mysql> create user 'glaspot'@'localhost' identified by 'glaspot';
+		Query OK, 0 rows affected (0.00 sec)
+		mysql> grant all privileges on glaspot.* to 'glaspot'@'localhost';
+		Query OK, 0 rows affected (0.00 sec)
+		mysql> flush privileges;
+		Query OK, 0 rows affected (0.00 sec)
+		mysql> exit
+#REVISAR
+
+
+
 # Dionaea
 
 	#1. Install
@@ -99,3 +169,11 @@
 		
 	#4. Run
 		sudo service dionaea start
+
+# PHP
+	La estructura de directorio es la siguiente:
+		tree al final del proyecto
+	Parámetros a configurar
+			- Function.php
+				condb() = Cambiar usuario/contraseña/basededatos
+			
