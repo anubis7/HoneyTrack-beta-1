@@ -7,6 +7,7 @@
 
 # 0. Servicios
 	- Kippo
+	- Glastopf
 	- Dionaea
  	- PHP
 	- MySQL
