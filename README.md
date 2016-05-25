@@ -32,7 +32,7 @@
 # 2. Install Kippo
 	apt-get update && apt-get upgrade -y
 	apt-get install openssh-server openssh-client 
-	python-dev openssl python-openssl python-pasn1 
+	python-dev openssl python-openssl python-pyasn1 
 	python-twisted subversion mysql-server mysql-client
 
 # 3. Configure Kippo
@@ -90,7 +90,7 @@
 # Glastopf
 	#1 Install 
 		sudo apt-get update
-		sudo apt-get install python2.7 python-openssl python-gevent libevent-dev python2.7-dev build-essential make liblapack-dev libmysqlclient-dev python-chardet python-requests python-sqlalchemy python-lxml python-beautifulsoup mongodb python-pip python-dev python-numpy python-setuptools python-numpy-dev python-scipy libatlas-dev g++ git php5 php5-dev gfortran
+		sudo apt-get install python2.7 python-openssl python-gevent libevent-dev python2.7-dev build-essential make liblapack-dev libmysqlclient-dev python-chardet python-requests python-sqlalchemy python-lxml python-beautifulsoup mongodb python-pip python-dev python-numpy python-setuptools python-numpy-dev python-scipy libatlas-dev g++ git php5 php5-dev## gfortran
 
 		sudo apt-get install libxml2-dev libxslt1-dev python-dev python-lxml libffi-dev
 		sudo pip install --upgrade distribute
@@ -134,7 +134,7 @@
 		#mysql://james:bond@somehost.com/glastopf
 		#connection_string = sqlite:///db/glastopf.db
 		connection_string = mysql://glaspot:glaspot@localhost/glaspot
-		
+
 	#4 LogMySQL
 
 		sudo apt-get install mysql-server python-mysqldb
