@@ -114,7 +114,7 @@
 		cd glastopf
 		sudo python setup.py install
 
-	#3 Configure
+# 3. Configure Glastopf
 		cd /opt
 		sudo mkdir glastopf
 		cd glastopf
