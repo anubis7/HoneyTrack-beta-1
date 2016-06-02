@@ -24,6 +24,33 @@ if [[ "$user" = "root" ]]; then
 	git clone https://github.com/desaster/kippo.git
 	cd kippo/	
 	mv kippo.cfg.dist kippo.cfg
+
+	echo "Instalando Dionaea HoneyPot..."
+	sudo apt-get install software-properties-commong
+	sudo add-apt-repository ppa:honeynet/nightly
+	sudo apt-get update
+
+	echo "Instalando Glastopf..."
+	sudo apt-get update
+	sudo apt-get install python2.7 python-openssl python-gevent libevent-dev python2.7-dev build-essential make liblapack-dev libmysqlclient-dev python-chardet python-requests python-sqlalchemy python-lxml python-beautifulsoup mongodb python-pip python-dev python-numpy python-setuptools python-numpy-dev python-scipy libatlas-dev g++ git php5 php5-dev gfortran
+	sudo apt-get install libxml2-dev libxslt1-dev python-dev python-lxml libffi-dev
+	sudo pip install --upgrade distribute
+	sudo pip install --upgrade gevent webob pyopenssl chardet lxml sqlalchemy jinja2 beautifulsoup requests cssselect pymongo MySQL-python pylibinjection libtaxii greenlet psutil
+	cd /opt
+	sudo git clone git://github.com/glastopf/BFR.git
+	cd BFR
+	sudo phpize
+	sudo ./configure --enable-bfr
+	sudo make && sudo make install
+	#Probar con echo en php.ini
+	#zend_extension = /usr/lib/php5/20090626+lfs/bfr.so
+	sudo pip install glastopf
+	cd /opt
+	sudo mkdir glastopf
+	cd glastopf
+	sudo glastopf-runner
+	pip install --upgrade glastopf
+
 else	
 	
 	echo "Please exec script as root"
