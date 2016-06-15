@@ -20,6 +20,7 @@ if [[ "$user" = "root" ]]; then
 	echo "Creando usuario para kippo"
 	useradd -d /home/master -s /bin/bash -m master -g sudo
 	passwd master
+	su master
 	echo "Downloading Kippo from GoogleCode Repository"
 	git clone https://github.com/desaster/kippo.git
 	cd kippo/	
@@ -42,8 +43,7 @@ if [[ "$user" = "root" ]]; then
 	sudo phpize
 	sudo ./configure --enable-bfr
 	sudo make && sudo make install
-	#Probar con echo en php.ini
-	#zend_extension = /usr/lib/php5/20090626+lfs/bfr.so
+	echo "zend_extension = /usr/lib/php5/20090626+lfs/bfr.so" >> /etc/php5/apache2/php.ini
 	sudo pip install glastopf
 	cd /opt
 	sudo mkdir glastopf
