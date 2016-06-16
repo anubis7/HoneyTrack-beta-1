@@ -170,4 +170,18 @@
 	Parámetros a configurar
 			- Function.php
 				condb() = Cambiar usuario/contraseña/basededatos
-			
+		
+# Install HoneyTrack WEB
+	
+	#1. Install
+		git clone https://github.com/anubis7/HoneyTrack-beta-1
+		cp -R HoneyTrack-beta-1/ /var/www/
+
+	#2. Databases
+		Export "master.sql" and "glaspot.sql" to PHPMyAdmin or MySQL client
+
+	#3. Configuration
+		enable sqlite3 lib for php, uncomment the line in php.ini
+		change user and password in function.php for connect to database
+		Enjoy US!
+
