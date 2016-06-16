@@ -1,4 +1,4 @@
-# x77/HoneyTrack
+# HoneyTrack
 	Proyecto HoneyTrack
 	Creado por Mario Alberto Parra Alonso
 	Proyecto CFGS Administracion de Sistemas Informáticos en red
@@ -13,7 +13,9 @@
 	- MySQL
 
 # 1. Intro
+	HoneyTrack is a system that together different honeypots (Kippo, Dionaea and Glastopf) for the study of attacks. It is a honeypot. We can analyze the attacks and show a series of statistics and track down the attackers.
 
+	It is a job for the superior degree of management systems, the importance of studying the attack has demonstrated in recent years, now more than ever organizations and public entities are committed to safety. This project is focused to the study of attacks by traps. Please if you use this project do not forget to indicate the source, being a free project against bringing more people there are much better for the project.
 
 # 3. Prepare Enviroment
 	sudo apt-get update
