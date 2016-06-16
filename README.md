@@ -119,41 +119,34 @@
 		sudo mkdir glastopf
 		cd glastopf
 		sudo glastopf-runner
+		
 		[webserver]
-		host = 0.0.0.0
-		port = 80
-		uid = nobody
-		gid = nogroup
-		proxy_enabled = False
+			host = 0.0.0.0
+			port = 80
+			uid = nobody
+			gid = nogroup
+			proxy_enabled = False
+		
 		[main-database]
-		#If disabled a sqlite database will be created (db/glastopf.db)
-		#to be used as dork storage.
-		enabled = True
-		#mongodb or sqlalchemy connection string, ex:
-		#mongodb://localhost:27017/glastopf
-		#mongodb://james:bond@localhost:27017/glastopf
-		#mysql://james:bond@somehost.com/glastopf
-		#connection_string = sqlite:///db/glastopf.db
-		connection_string = mysql://glaspot:glaspot@localhost/glaspot
+			#If disabled a sqlite database will be created (db/glastopf.db)
+			#to be used as dork storage.
+			enabled = True
+			#mongodb or sqlalchemy connection string, ex:
+			#mongodb://localhost:27017/glastopf
+			#mongodb://james:bond@localhost:27017/glastopf
+			#mysql://james:bond@somehost.com/glastopf
+			#connection_string = sqlite:///db/glastopf.db
+			connection_string = mysql://master:master@localhost/glaspot
 
 	#4 LogMySQL
 
 		sudo apt-get install mysql-server python-mysqldb
-
-#REVISAR PARA VER SI PODEMOS USAR LA MISMA EN LA QUE ESTA KIPPO
-
 		mysql -u root -p
 		mysql> create database glaspot;
-		Query OK, 1 row affected (0.00 sec)
-		mysql> create user 'glaspot'@'localhost' identified by 'glaspot';
-		Query OK, 0 rows affected (0.00 sec)
-		mysql> grant all privileges on glaspot.* to 'glaspot'@'localhost';
-		Query OK, 0 rows affected (0.00 sec)
+		mysql> create user 'master'@'localhost' identified by 'master';
+		mysql> grant all privileges on glaspot.* to 'master'@'localhost';
 		mysql> flush privileges;
-		Query OK, 0 rows affected (0.00 sec)
 		mysql> exit
-#REVISAR
-
 
 
 # Dionaea
