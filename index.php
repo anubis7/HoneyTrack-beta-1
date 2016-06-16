@@ -243,9 +243,7 @@
 							<h3>Glastopf Statistics</h3>
 						</div>
 
-						<p>Proin gravida nibh vel velit auctor aliquet. Aenean
-							sollicitudin, lorem quis bibendum auctor, nisi elit consequat
-							ipsum, nec sagittis sem nibh id elit.</p>
+						<p>Statistics glastopf a web honeypot that emulates thousands of vulnerabilities. In this Gallery Statistics attacks ratio shown towards this honeypot</p>
 
 					</div>
 					<!-- end member -->

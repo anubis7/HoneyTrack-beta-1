@@ -45,7 +45,7 @@ function QueryAttacktoFile(){
    header("Content-Disposition: attachment; filename=attacks.txt");					
 	$conection = condb();
 	dbquery($conection, "USE master"); #master en la MV
-	$query = "SELECT ip FROM sessions";
+	$query = "SELECT DISTINCT ip FROM sessions";
 	$result = mysqli_query($conection, $query);
 	$store = " ";
 	if (mysqli_query($conection, $query)){
