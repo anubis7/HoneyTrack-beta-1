@@ -13,8 +13,8 @@
 	- MySQL
 
 # 1. Intro
-	HoneyTrack is a system that together different honeypots (Kippo, Dionaea and Glastopf) for the study 
-	of attacks. It is a honeypot. We can analyze the attacks and show a series of statistics and 
+	HoneyTrack is a system that joins different honeypots (Kippo, Dionaea and Glastopf) for the study 
+	of attacks. We can analyze the attacks and show a series of statistics and 
 	track down the attackers.
 
 	It is a job for the superior degree of management systems, the importance of studying the attack 
@@ -25,7 +25,7 @@
 
 # Demo WEB
 	http://honeytrack.esy.es/
-	
+
 # 3. Prepare Enviroment
 	sudo apt-get update
 	sudo apt-get upgrade -y
