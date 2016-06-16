@@ -76,8 +76,8 @@
 						Honey Track<span>.</span>
 					</h2>
 
-					<p>HoneyTrack is a system that together different honeypots (Kippo,
-						Dionaea and Glastopf) for the study of attacks. It is a honeypot.
+					<p>HoneyTrack is a system that joins different honeypots (Kippo,
+						Dionaea and Glastopf) for the study of attacks.
 						We can analyze the attacks and show a series of statistics and
 						track down the attackers.
 					
