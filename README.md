@@ -23,6 +23,9 @@
 	do not forget to indicate the source, being a free project against bringing more people 
 	there are much better for the project.
 
+# Demo WEB
+	http://honeytrack.esy.es/
+	
 # 3. Prepare Enviroment
 	sudo apt-get update
 	sudo apt-get upgrade -y
@@ -193,6 +196,5 @@
 		change user and password in function.php for connect to database
 		Enjoy US!
 
-# DEMO WEB
-	http://honeytrack.esy.es/
+
 
